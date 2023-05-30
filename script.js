@@ -1,11 +1,9 @@
 const texto = document.querySelector(".texto");
 const mensaje = document.querySelector(".mensaje");
-const copiar = document.querySelector(".mensaje");/**nose si es mensaje o copiar, porque mensaje es el area de texto a copiar pero el boton es mensaje
- */
-
 
 function btnEncriptar(){
     const textoEncriptado = encriptar(texto.value);
+    eliminarAcentosEs(texto.value);
     mensaje.value = textoEncriptado;
     texto.value = "";
     mensaje.style.backgroundImage = "none";
@@ -46,5 +44,15 @@ function copiarMensaje(){
     textcopiado.mesajeAll();
 }
 
+function eliminarAcentosEs(texto) {
+    return texto
+           .normalize('NFD')
+           .replace(/([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+/gi,"$1")
+           .normalize();
+}
+
+function mostrarSinAcento(inp){
+    texto.value = eliminarAcentosEs(texto.value)
+}
 
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Goldman:wght@700&family=Montserrat:wght@300&family=Play&family=Roboto+Condensed&family=Roboto+Mono:wght@500&family=Ubuntu:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <body>
+        <header>
+            <div class="titulo">
+                <img src="imagenes/logo.png" alt="Logo Alura" class="logo">
+                <h1 >Encriptador &#8360;</h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="container1">
+                <div>
+                    <textarea class="texto" cols="20" rown="10" style="width: 400px; height: 80px;" placeholder="Ingrese el texto..."></textarea>
+                    <h6 class="informacion1">&excl; Solo letras minúscuas y sin acento</h6>
+                </div>
+                <div class="botones">
+                    <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="container2">
+                <div>
+                    <textarea class="mensaje" cols="20" rows="10" style="width: 250px; height: 200px;" placeholder="Ningún mensaje fue encontrado!  Ingresa el texto que desees encriptar o desencriptar"></textarea>
+
+                </div>
+                <div class="botonCopiar">
+                    <button class="btn-copiar" onclick="copiarMensaje()">Copiar</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="https://www.aluracursos.com/"><img class="logof" src="imagenes/logo.png" alt="logoAlura"></a></li>
+                <li><a href="https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BTLITa0xGS8mgVEZG0pdj%2BA%3D%3D"><img class="linkedin" src="imagenes/linkedin1.png" alt="logo linkedin"></a></li>
+            </ul>
+            <p>&copy; Copyrigth Encriptador 2023</p>
+        </footer>
+        
+    <script src="script.js"></script>
+    </body>
+</html>
+
